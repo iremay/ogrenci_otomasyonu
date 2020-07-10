@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+  <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,32 +8,31 @@
 <title>Ogrenci Bilgi Sistemi</title>
 </head>
 <body>
-<center>
+	
         <h1>Ogrenci Bilgi Sistemi</h1>
         <h2>
             <a href="/new">Ogrenci Kaydi</a>
             &nbsp;&nbsp;&nbsp;
-            <a href="/list">Ogrenci Listesi</a>
-             
+            <a href="/list">Ogrenci Listesi</a>      
         </h2>
-        </center>
+      
     <div align="center">
         <c:if test="${ogrenci != null}">
-            <form action="guncelle" method="post">
+            <form action="guncelle" method="post"></form>
         </c:if>
         <c:if test="${ogrenci == null}">
-            <form action="ekle" method="post">
+            <form action="ekle" method="post"></form>
         </c:if>
-        <table border="1" cellpadding="5">
+        <table border="1">
             <caption>
-                <h2>
+               
                     <c:if test="${ogrenci != null}">
                         Ogrenci Guncelle
                     </c:if>
                     <c:if test="${ogrenci  == null}">
                         Yeni Ogrenci Kaydi
                     </c:if>
-                </h2>
+           
             </caption>
                 <c:if test="${ogrenci != null}">
                     <input type="hidden" name="id" value="<c:out value='${ogrenci.id}' />" />
@@ -67,7 +67,7 @@
                 </td>
             </tr>
         </table>
-     </form>
+    
   </div>   
 
 </body>
