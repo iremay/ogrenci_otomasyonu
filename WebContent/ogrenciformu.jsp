@@ -11,17 +11,17 @@
 	
         <h1>Ogrenci Bilgi Sistemi</h1>
         <h2>
-            <a href="/new">Ogrenci Kaydi</a>
+            <a href="./new">Ogrenci Kaydi</a>
             &nbsp;&nbsp;&nbsp;
-            <a href="/list">Ogrenci Listesi</a>      
+            <a href="./list">Ogrenci Listesi</a>      
         </h2>
       
     <div align="center">
         <c:if test="${ogrenci != null}">
-            <form action="guncelle" method="post"></form>
+            <form action="guncelle" method="post">
         </c:if>
         <c:if test="${ogrenci == null}">
-            <form action="ekle" method="post"></form>
+            <form action="ekle" method="post">
         </c:if>
         <table border="1">
             <caption>
@@ -66,6 +66,7 @@
                     <input type="submit" value="Save" />
                 </td>
             </tr>
+            </form>
         </table>
     
   </div>   

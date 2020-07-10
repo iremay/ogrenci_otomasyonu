@@ -10,9 +10,9 @@
 <body>
 <h1>Ogrenci Bilgi Sistemi</h1>
         <h2>
-            <a href="/new">Ogrenci Kaydi</a>
+            <a href="./yenikayit">Ogrenci Kaydi</a>
             &nbsp;&nbsp;&nbsp;
-            <a href="/list">Ogrenci Listesi</a>
+            <a href="./list">Ogrenci Listesi</a>
              
         </h2>
    
@@ -34,9 +34,9 @@
                     <td><c:out value="${ogrenci.soyad}" /></td>
                     <td><c:out value="${ogrenci.bolum}" /></td>
                     <td>
-                       <a href="/edit?id=<c:out value='${ogrenci.id}' />" >Düzenle</a>
+                       <a href="./duzenle?id=<c:out value='${ogrenci.id}' />" >Düzenle</a>
                        &nbsp;&nbsp;&nbsp;&nbsp;
-                       <a href="/delete?id=<c:out value='${ogrenci.id}' />" >Sil</a>                     
+                       <a href="./sil?id=<c:out value='${ogrenci.id}' />" >Sil</a>                     
                    </td>               
                 </tr>          
             </c:forEach>

@@ -7,7 +7,7 @@
  
     <context-param>
         <param-name>jdbcURL</param-name>
-        <param-value>jdbc:mysql://localhost:3306/otomasyonsistemi</param-value>
+        <param-value>jdbc:mysql://localhost:3306/otomasyonsistemi?useLegacyDatetimeCode=false&amp;serverTimezone=Turkey&amp;useSSL=false</param-value>
     </context-param>
  
     <context-param>
@@ -17,7 +17,7 @@
  
     <context-param>
         <param-name>jdbcPassword</param-name>
-        <param-value>P@ssw0rd</param-value>
+        <param-value>Kafein321</param-value>
     </context-param>
  
     <servlet>

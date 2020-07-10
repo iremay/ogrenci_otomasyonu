@@ -41,7 +41,7 @@ public class ControllerServlet extends HttpServlet {
 		  try {
 	            
 				switch (action) {
-	            case "/yenikayýt":
+	            case "/yenikayit":
 	                yeniogrencikaydi(request, response);
 	                break;
 	            case "/ekle":
@@ -68,7 +68,7 @@ public class ControllerServlet extends HttpServlet {
             throws SQLException, IOException, ServletException {
         List<ogrenci> ogrencilistesi= ogrenciDAO.ogrencilistesi();
         request.setAttribute("ogrencilistesi", ogrencilistesi);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("ogrenciformu.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("ogrencilistesi.jsp");
         dispatcher.forward(request, response);
     }
  
