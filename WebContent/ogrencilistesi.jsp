@@ -34,9 +34,9 @@
                     <td><c:out value="${ogrenci.soyad}" /></td>
                     <td><c:out value="${ogrenci.bolum}" /></td>
                     <td>
-                       <a href="./duzenle?id=<c:out value='${ogrenci.id}' />" >Düzenle</a>
+                       <a href="./ogrenciduzenle?id=<c:out value='${ogrenci.id}' />" >Düzenle</a>
                        &nbsp;&nbsp;&nbsp;&nbsp;
-                       <a href="./sil?id=<c:out value='${ogrenci.id}' />" >Sil</a>                     
+                       <a href="./ogrencisil?id=<c:out value='${ogrenci.id}' />" >Sil</a>                     
                    </td>               
                 </tr>          
             </c:forEach>

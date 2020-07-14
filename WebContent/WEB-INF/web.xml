@@ -3,11 +3,11 @@
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
     id="WebApp_ID" version="3.1">
-    <display-name>Ogrenci Bilgi Sistemi</display-name>
+    <display-name>Ogrenci Otomasyonu</display-name>
  
     <context-param>
         <param-name>jdbcURL</param-name>
-        <param-value>jdbc:mysql://localhost:3306/otomasyonsistemi?useLegacyDatetimeCode=false&amp;serverTimezone=Turkey&amp;useSSL=false</param-value>
+        <param-value>jdbc:mysql://127.0.0.1:3306/ogrenciotomasyonu?useLegacyDatetimeCode=false&amp;serverTimezone=Turkey&amp;useSSL=false</param-value>
     </context-param>
  
     <context-param>
@@ -17,12 +17,12 @@
  
     <context-param>
         <param-name>jdbcPassword</param-name>
-        <param-value>Kafein321</param-value>
+        <param-value>1234</param-value>
     </context-param>
  
     <servlet>
         <servlet-name>ControllerServlet</servlet-name>
-        <servlet-class>otomasyonsistemi.ControllerServlet</servlet-class>
+        <servlet-class>ogrenciotomasyonu.ControllerServlet</servlet-class>
     </servlet>
  
     <servlet-mapping>
