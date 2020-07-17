@@ -14,11 +14,16 @@ public class ogrenci {
         this.id = id;
     }
  
-    public ogrenci(int id, String ad, String soyad,String bolum) {
-        this(ad, soyad, bolum);
-    }
-     
-    public ogrenci(String ad, String soyad, String bolum) {
+
+    public ogrenci(int id, String ad, String soyad, String bolum) {
+		super();
+		this.id = id;
+		this.ad = ad;
+		this.soyad = soyad;
+		this.bolum = bolum;
+	}
+
+	public ogrenci(String ad, String soyad, String bolum) {
         this.ad = ad;
         this.soyad = soyad;
         this.bolum = bolum;

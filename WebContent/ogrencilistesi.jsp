@@ -4,27 +4,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <meta charset="ISO-8859-1">
 <title>Ogrenci Listesi</title>
 </head>
-<body>
-<h1>Ogrenci Bilgi Sistemi</h1>
-        <h2>
-            <a href="./yenikayit">Ogrenci Kaydi</a>
+<body style="background-color:#e6e6e6">
+<div class="text-center" style="font-size:300%;">OGRENCI BILGI SISTEMI</div>
+ <br></br>
+
+<ul class="nav flex-column">     
+     <li class="nav-item">
+          <a class="nav-link" href="./yenikayit">Ogrenci Kaydi</a>
             &nbsp;&nbsp;&nbsp;
-            <a href="./list">Ogrenci Listesi</a>
-             
-        </h2>
-   
+       </li>  <li class="nav-item">
+           <a class="nav-link" href="./list">Ogrenci Listesi</a>
+        </li>     
+     
+ </ul>
+    <br></br>
     <div align="center">
-        <table  border="1">
-            <caption> Ogrenci Listesi</caption>
+        <table  border="1" class="table" >
+          <caption> Ogrenci Listesi</caption>
+        	<thead class="thead-dark">
             <tr>
-                <th>ID</th>
-                <th>Ad</th>
-                <th>Soyad</th>
-                <th>Bölüm</th>
-                <th>Islem</th>
+                <th scope="col">ID</th>
+                <th scope="col">Ad</th>
+                <th scope="col">Soyad</th>
+                <th scope="col">Bolum</th>
+                <th scope="col">Islem</th>
                 
             </tr>
             <c:forEach var="ogrenci" items="${ogrencilistesi}">
@@ -34,9 +41,13 @@
                     <td><c:out value="${ogrenci.soyad}" /></td>
                     <td><c:out value="${ogrenci.bolum}" /></td>
                     <td>
-                       <a href="./ogrenciduzenle?id=<c:out value='${ogrenci.id}' />" >Düzenle</a>
+                    <button type="button" class="btn btn-secondary btn-lg">
+                       <a href="./guncelle?id=<c:out value='${ogrenci.id}' />" >Duzenle</a>
                        &nbsp;&nbsp;&nbsp;&nbsp;
-                       <a href="./ogrencisil?id=<c:out value='${ogrenci.id}' />" >Sil</a>                     
+                      </button>
+                       <button type="button" class="btn btn-secondary btn-lg">
+                       <a href="./sil?id=<c:out value='${ogrenci.id}' />" >Sil</a>     
+                       </button>                
                    </td>               
                 </tr>          
             </c:forEach>

@@ -78,7 +78,7 @@ public class ControllerServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
  
-    private void ogrenciduzenle(HttpServletRequest request, HttpServletResponse response)
+    private void ogrenciguncelle(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         ogrenci existingogrenci = ogrenciDAO.ogrencigetir(id);
@@ -99,7 +99,7 @@ public class ControllerServlet extends HttpServlet {
         response.sendRedirect("list");
     }
  
-    private void ogrenciguncelle(HttpServletRequest request, HttpServletResponse response)
+    private void ogrenciduzenle(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         String ad = request.getParameter("ad");
