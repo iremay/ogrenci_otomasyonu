@@ -47,15 +47,15 @@
  <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Ad</label>    
-    <input type="text" class="form-control" id="ad" name="ad" aria-describedby="emailHelp"  value="<c:out value='${ogrenci.ad}' />">
-   
+    <input type="text" class="form-control" id="ad" name="ad" value="<c:out value='${ogrenci.ad}' />">
+
   </div>  
    <div class="form-group">
     <label for="exampleInputPassword1">Soyad</label>
     <input type="text" class="form-control" id="Soyad" name="soyad"  value="<c:out value='${ogrenci.soyad}' />">
   </div>
   <div class="form-group">
-   <label class="form-check-label" for="exampleCheck1">Bolum</label>
+   <label class="form-check-label" for="exampleCheck1">Bolum</label>   
     <input type="text" class="form-control" id="Bolum" name="bolum"  value="<c:out value='${ogrenci.bolum}' />">
   </div>
   <button type="submit" class="btn btn-primary">Kaydet</button>
