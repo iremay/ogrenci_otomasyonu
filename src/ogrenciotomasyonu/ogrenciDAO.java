@@ -139,7 +139,3 @@ public class ogrenciDAO {
         return ogrenci;
     }
 }
-
-
-
-
