@@ -1,6 +1,7 @@
 package ogrenciotomasyonu;
 
 import java.io.IOException;
+
 import java.sql.SQLException;
 import java.util.List;
 
@@ -28,11 +29,12 @@ public class ControllerServlet extends HttpServlet {
  
     }
 	
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			   throws ServletException, IOException {
-			// TODO Auto-generated method stub
-			doGet(request, response);
-		}
+        doGet(request, response);
+    }
+		
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub

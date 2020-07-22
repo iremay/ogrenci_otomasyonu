@@ -19,6 +19,8 @@
 <div class="list-group">
     <a class="nav-link" href="./yenikayit" class="list-group-item list-group-item-action active">Ogrenci Kaydi</a>
     <a class="nav-link" href="./list" class="list-group-item list-group-item-action active">Ogrenci Listesi</a>
+	 <a class="nav-link" href="/logout" class="list-group-item list-group-item-action active">Cikis</a>
+</div>
 </div>
  </div>
  
@@ -43,7 +45,9 @@
             </caption>
                 <c:if test="${ogrenci != null}">
                     <input type="hidden" name="id" value="<c:out value='${ogrenci.id}' />" />   
-             </c:if>           
+             </c:if>
+             
+                        
  <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Ad</label>    

@@ -8,7 +8,7 @@
 
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Ogrenci Listesi</title>
+<title>Ogrenci Bilgi Sistemi</title>
 </head>
 
 
@@ -24,6 +24,8 @@
 <div class="list-group">
     <a class="nav-link" href="./yenikayit" class="list-group-item list-group-item-action active">Ogrenci Kaydi</a>
     <a class="nav-link" href="./list" class="list-group-item list-group-item-action active">Ogrenci Listesi</a>
+     <a class="nav-link" href="/logout" class="list-group-item list-group-item-action active">Cikis</a>
+</div>
 </div>
  </div>
  
