@@ -12,16 +12,28 @@ import javax.servlet.http.*;
 public class UserLoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
  
+    
+    private userDAO userDao;
     public UserLoginServlet() {
         super();
     }
+    
+    public void init() {
+    	  String jdbcURL = getServletContext().getInitParameter("jdbcURL");
+    		String jdbcUsername = getServletContext().getInitParameter("jdbcUsername");
+    		String jdbcPassword = getServletContext().getInitParameter("jdbcPassword");
  
+    		userDao = new userDAO(jdbcURL, jdbcUsername, jdbcPassword); 
+    }
+    
+  
+    
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
          
-        userDAO userDao = new userDAO();
+        
          
         try {
             user user = userDao.checkLogin(username, password);

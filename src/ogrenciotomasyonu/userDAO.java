@@ -4,31 +4,40 @@ import java.sql.*;
 
 public class userDAO {
 	
-	public user checkLogin(String username, String password) throws SQLException,
-    ClassNotFoundException {
-String jdbcURL = "jdbc:mysql://127.0.0.1:3306/ogrenciotomasyonu?useLegacyDatetimeCode=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=Turkey&amp;useSSL=false";
-String dbUser = "root";
-String dbPassword = "1234";
+	private String jdbcURL;
+    private String jdbcUsername;
+    private String jdbcPassword;
+    private Connection jdbcConnection;
+     
+    public userDAO(String jdbcURL, String jdbcUsername, String jdbcPassword) {
+        this.jdbcURL = jdbcURL;
+        this.jdbcUsername = jdbcUsername;
+        this.jdbcPassword = jdbcPassword;
+    }
+	
+    public userDAO() {}
 
-Class.forName("com.mysql.jdbc.Driver");
-Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
-String sql = "SELECT * FROM login WHERE username = ? and password = ?";
-PreparedStatement statement = connection.prepareStatement(sql);
-statement.setString(1, username);
-statement.setString(2, password);
+	public user checkLogin(String username, String password) throws SQLException, ClassNotFoundException {
 
-ResultSet result = statement.executeQuery();
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
+		String sql = "SELECT * FROM login WHERE username = ? and password = ?";
+		PreparedStatement statement = connection.prepareStatement(sql);
+		statement.setString(1, username);
+		statement.setString(2, password);
 
-user user = null;
+		ResultSet result = statement.executeQuery();
 
-if (result.next()) {
-    user = new user();
-    user.setUsername(username);
-}
+		user user = null;
 
-connection.close();
+		if (result.next()) {
+			user = new user();
+			user.setUsername(username);
+		}
 
-return user;
-}
+		connection.close();
+
+		return user;
+	}
 
 }
