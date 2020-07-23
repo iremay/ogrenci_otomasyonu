@@ -58,6 +58,12 @@ public class ControllerServlet extends HttpServlet {
 	            case "/guncelle":
 	                ogrenciguncelle(request, response);
 	                break;
+	            case "/Logout":
+	            	Cikis(request, response);
+	            	break;
+	            case "/anasayfa":
+	            	anasayfa(request, response);
+	            	break;
 	            default:
 	                ogrencilistesi(request, response);
 	                break;
@@ -122,6 +128,19 @@ public class ControllerServlet extends HttpServlet {
         response.sendRedirect("list");
  
     }
+    
+    private void Cikis(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+        dispatcher.forward(request, response);
+    }
+    
+    private void anasayfa(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
+        dispatcher.forward(request, response);
+    }
+ 
 	
     public ControllerServlet() {
         super();

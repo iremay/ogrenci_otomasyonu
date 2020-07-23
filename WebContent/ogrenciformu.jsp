@@ -5,7 +5,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
 
 <title>Ogrenci Bilgi Sistemi</title>
 </head>
@@ -15,16 +15,16 @@
 	 <br></br>
 	 
 <div class="row">
-<div  class="col">
+<div class="col-8 col-sm-3" >
 <div class="list-group">
+	<a class="nav-link" href="./anasayfa" class="list-group-item list-group-item-action active">Ana Sayfa</a>
     <a class="nav-link" href="./yenikayit" class="list-group-item list-group-item-action active">Ogrenci Kaydi</a>
     <a class="nav-link" href="./list" class="list-group-item list-group-item-action active">Ogrenci Listesi</a>
-	 <a class="nav-link" href="/logout" class="list-group-item list-group-item-action active">Cikis</a>
+	 <a class="nav-link" href="./Logout" class="list-group-item list-group-item-action active">Cikis</a>
 </div>
 </div>
- </div>
  
-<div  class="col">
+<div class="col-8 col-sm-9">
 
         <c:if test="${ogrenci != null}">
             <form action="duzenle" method="post">
@@ -46,7 +46,7 @@
                 <c:if test="${ogrenci != null}">
                     <input type="hidden" name="id" value="<c:out value='${ogrenci.id}' />" />   
              </c:if>
-             
+     <br></br>        
                         
  <form>
   <div class="form-group">

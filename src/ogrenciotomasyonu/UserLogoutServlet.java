@@ -9,7 +9,7 @@ import javax.servlet.http.*;
 /**
  * Servlet implementation class UserLogoutServlet
  */
-@WebServlet("/UserLogoutServlet")
+@WebServlet("/Logout")
 public class UserLogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     /**
@@ -31,11 +31,12 @@ public class UserLogoutServlet extends HttpServlet {
 		  HttpSession session = request.getSession();
 		if (session != null) {
             session.removeAttribute("user");
-             
+           
             RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
             dispatcher.forward(request, response);
         }
 	}
+	  
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

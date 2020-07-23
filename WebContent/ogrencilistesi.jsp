@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
@@ -20,18 +20,15 @@
 
 <br></br>
  <div class="row">
-<div  class="col-md 6">
+<div class="col-8 col-sm-3">
 <div class="list-group">
+	<a class="nav-link" href="./anasayfa" class="list-group-item list-group-item-action active">Ana Sayfa</a>
     <a class="nav-link" href="./yenikayit" class="list-group-item list-group-item-action active">Ogrenci Kaydi</a>
     <a class="nav-link" href="./list" class="list-group-item list-group-item-action active">Ogrenci Listesi</a>
-     <a class="nav-link" href="/logout" class="list-group-item list-group-item-action active">Cikis</a>
+     <a class="nav-link" href="./Logout" class="list-group-item list-group-item-action active">Cikis</a>
 </div>
 </div>
- </div>
- 
- <br></br>
- 
- <div class="col-8">
+  <div class="col-8 col-sm-9">
    <table  border="1" class="table" >
   
     <caption  class="font-weight-bold"> Ogrenci Listesi</caption>
@@ -65,6 +62,6 @@
   </div> 
  
   </div>  
-  </div> 
+ </div>
 </body>
 </html>

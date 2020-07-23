@@ -9,20 +9,25 @@
 <title>Ogrenci Bilgi Sistemi</title>
 </head>
 <body style="background-color:#e6e6e6;">
-    <div style="text-align: center">
-        <h1>Ogrenci Bilgi Sistemi</h1>
-        <b>${user.username} (${user.password})</b>
-        <br><br>
-          </div>
-         <div class="row">
-<div  class="col">
+<div class="container">
+
+<div class="text-center" style="font-size:300%;">OGRENCI BILGI SISTEMI</div>
+<br></br>
+          
+<div class="row">
+<div class="col-8 col-sm-3" >
 <div class="list-group">
+	<a class="nav-link" href="./anasayfa" class="list-group-item list-group-item-action active">Ana Sayfa</a>
     <a class="nav-link" href="./yenikayit" class="list-group-item list-group-item-action active">Ogrenci Kaydi</a>
     <a class="nav-link" href="./list" class="list-group-item list-group-item-action active">Ogrenci Listesi</a>
-    <a class="nav-link" href="/logout" class="list-group-item list-group-item-action active">Cikis</a>
+    <a class="nav-link" href="./Logout" class="list-group-item list-group-item-action active">Cikis</a>
 </div>
  </div>
-   </div>
+ <div class="col-8 col-sm-9">
+ </div>
+
   
+ </div>
+ </div>
 </body>
 </html>

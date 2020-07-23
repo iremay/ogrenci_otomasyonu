@@ -10,16 +10,21 @@
 </head>
 <body>
     <div style="text-align: center">
-        <h1>Ogrenci Bilgi Sistemi</h1>
+        <h1>OGRENCI BILGI SISTEMI</h1>
+        <br></br>
         <form action="login" method="post">
+        <div class="form-group">
             <label for="username">Kullanici adi:</label>
             <input name="username" size="30" />
-            <br><br>
+         </div> 
+          
+         <div class="form-group">
             <label for="password">Sifre:</label>
             <input type="password" name="password" size="30" />
             <br>${message}
-            <br><br>           
-            <button type="submit">Login</button>
+            
+          </div>           
+            <button type="submit">Giris</button>
         </form>
     </div>
 </body>
